@@ -12,11 +12,7 @@ function init() {
     let headerComponent = new HeaderComponent('Header');
     let footerComponent = new FooterComponent('Footer');
 
-    let blockList = [
-        new BlockComponent('hawai', hawai),
-        new BlockComponent('peperoni', peperoni),
-        new BlockComponent('margarita', margarita),
-    ];
+    let blockList = [new BlockComponent('hawai', hawai), new BlockComponent('peperoni', peperoni), new BlockComponent('margarita', margarita), new BlockComponent('margarita', margarita)];
 
     let listOfBlocks = new ListOfBlocks(blockList);
 
