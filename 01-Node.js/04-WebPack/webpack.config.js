@@ -20,11 +20,11 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './index.html'
         }),
-        new CopyPlugin({
-            patterns: [
-                { from: path.resolve(__dirname), to: path.resolve(__dirname, 'dist') }
-            ]
-        })
+        // new CopyPlugin({
+        //     patterns: [
+        //         { from: path.resolve(__dirname,), to: path.resolve(__dirname, 'dist') }
+        //     ]
+        // })
     ],
     module: {
         rules: [{
