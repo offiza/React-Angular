@@ -6,7 +6,8 @@
             </div>
             <div *ngIf="mainItem.hidden == true;" class="main-item__content">
                 <p>{{mainItem.content}}</p>
-                <button class="shine-button" (click)="openArticle(mainItem)">Read More</button>
+                <button class="shine-button" [routerLink]="['/Article/', mainItem.id]">Read More</button>
+                <!-- [routerLink]="['/', mainItem]" -->
             </div>
             <div class="main-item__footer">
                 <p>{{mainItem.footer}}</p>

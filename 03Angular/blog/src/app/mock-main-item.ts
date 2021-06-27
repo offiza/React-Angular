@@ -5,4 +5,8 @@ export const MainItems: MainItem[] = [
     { id: 2, name: 'Autumn', content: 'Autumn, also known as fall, is one of the four temperate seasons. Its related status as the season of the primary harvest has dominated its themes and popular images. Popular aspects of this aesthetic includes fruits, falling leaves, pumpkins, coats, and harvest holidays. It can also be a reference to autumn fashion styles.',footer: 'by offiza' },
     { id: 3, name: 'Winter', content: 'Winter is the coldest season of the year in polar and temperate zones; it does not occur in most of the tropical zone. ',footer: 'by offiza' },
     { id: 4, name: 'Spring', content: 'Spring, also known as springtime, is one of the four temperate seasons, succeeding winter and preceding summer. There are various technical definitions of spring, but local usage of the term varies according to local climate',footer: 'by offiza' },
+    { id: 5, name: 'Spring', content: 'Spring, also known as springtime, is one of the four temperate seasons, succeeding winter and preceding summer. There are various technical definitions of spring, but local usage of the term varies according to local climate',footer: 'by offiza' },
+    { id: 6, name: 'Spring', content: 'Spring, also known as springtime, is one of the four temperate seasons, succeeding winter and preceding summer. There are various technical definitions of spring, but local usage of the term varies according to local climate',footer: 'by offiza' },
+    { id: 7, name: 'Spring', content: 'Spring, also known as springtime, is one of the four temperate seasons, succeeding winter and preceding summer. There are various technical definitions of spring, but local usage of the term varies according to local climate',footer: 'by offiza' },
+
   ];

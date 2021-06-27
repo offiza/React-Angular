@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MainItem } from '../mainItem';
 import { MainItemService } from '../main-item.service';
 import { MessageService } from '../message.service';
-
+import {Router} from  '@angular/router'
 
 @Component({
   selector: 'app-main-item',
@@ -14,7 +14,7 @@ export class MainItemComponent implements OnInit {
   mainItems: MainItem[] = [];
   selectedItem?: MainItem;
 
-  constructor(private mainItemService: MainItemService, private messageService: MessageService) { }
+  constructor(private mainItemService: MainItemService, private messageService: MessageService, private router: Router) { }
 
   ngOnInit() {
     this.getMainItems();
@@ -31,7 +31,4 @@ export class MainItemComponent implements OnInit {
         .subscribe(mainItems => this.mainItems = mainItems);
   }
 
-  openArticle(mainItem: MainItem) : void{
-    
-  }
 }
