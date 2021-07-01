@@ -1,12 +1,5 @@
 import { MainItem } from './mainItem';
 
 export const MainItems: MainItem[] = [
-    { id: 1, name: 'Summer', content: 'Summer is the hottest of the four temperate seasons, falling after spring and before autumn. At or around the summer solstice (about 3 days before Midsummer Day), the earliest sunrise and latest sunset occurs, the days are longest and the nights are shortest, with day length decreasing as the season progresses after the solstice. The date of the beginning of summer varies according to climate, tradition, and culture. When it is summer in the Northern Hemisphere, it is winter in the Southern Hemisphere, and vice versa.',footer: 'by offiza'},
-    { id: 2, name: 'Autumn', content: 'Autumn, also known as fall, is one of the four temperate seasons. Its related status as the season of the primary harvest has dominated its themes and popular images. Popular aspects of this aesthetic includes fruits, falling leaves, pumpkins, coats, and harvest holidays. It can also be a reference to autumn fashion styles.',footer: 'by offiza' },
-    { id: 3, name: 'Winter', content: 'Winter is the coldest season of the year in polar and temperate zones; it does not occur in most of the tropical zone. ',footer: 'by offiza' },
-    { id: 4, name: 'Spring', content: 'Spring, also known as springtime, is one of the four temperate seasons, succeeding winter and preceding summer. There are various technical definitions of spring, but local usage of the term varies according to local climate',footer: 'by offiza' },
-    { id: 5, name: 'Spring', content: 'Spring, also known as springtime, is one of the four temperate seasons, succeeding winter and preceding summer. There are various technical definitions of spring, but local usage of the term varies according to local climate',footer: 'by offiza' },
-    { id: 6, name: 'Spring', content: 'Spring, also known as springtime, is one of the four temperate seasons, succeeding winter and preceding summer. There are various technical definitions of spring, but local usage of the term varies according to local climate',footer: 'by offiza' },
-    { id: 7, name: 'Spring', content: 'Spring, also known as springtime, is one of the four temperate seasons, succeeding winter and preceding summer. There are various technical definitions of spring, but local usage of the term varies according to local climate',footer: 'by offiza' },
 
   ];

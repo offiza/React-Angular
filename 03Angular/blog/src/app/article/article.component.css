@@ -6,7 +6,7 @@
 }
 
 .article {
-    padding: 10px;
+    margin: 10px;
 }
 
 .article__header {
@@ -26,8 +26,16 @@
     padding: 10px;
 }
 
-.article__content p {
+.article__content-text p {
     font-size: large;
+}
+
+.article__content-date {
+    margin: 2px;
+}
+
+.article__content-date p {
+    text-align: right;
 }
 
 .article__footer {
@@ -41,4 +49,32 @@
     font-size: 14pt;
     color: white;
     float: right;
+}
+
+.comments {
+    margin: 10px;
+    border: 1px solid black;
+}
+
+.comments__header {
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(252, 106, 80);
+}
+
+.comments__header p {
+    font-size: large;
+    font-weight: 700;
+}
+
+.comments__content {
+    background-color: rgb(255, 233, 230);
+}
+
+.comments__content-item {
+    display: flex;
+}
+
+.comments__content-item p {
+    margin: 10px;
 }

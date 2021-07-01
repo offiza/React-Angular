@@ -4,10 +4,36 @@
             <p>{{item.name}}</p>
         </div>
         <div class="article__content">
-            <p>{{item.content}}</p>
+            <div class="article__text-images">
+
+            </div>
+            <div class="article__content-text">
+                <p>{{item.content}}</p>
+            </div>
+            <div class="article__content-date">
+                <p>{{item.date}}</p>
+            </div>
         </div>
         <div class="article__footer">
-            <p>{{item.footer}}</p>
+            <p>by {{item.author}}</p>
+        </div>
+    </div>
+
+    <div class="comments">
+        <div class="comments__header">
+            <p>Comments</p>
+        </div>
+
+        <div class="comments__content">
+            <ol>
+                <div class="comments__content-item" *ngFor="let comment of item?.comments">
+                    <li>
+                        <p>{{comment.name}}:</p>
+                        <p>{{comment.text}}</p>
+                    </li>
+                </div>
+            </ol>
+            <p></p>
         </div>
     </div>
 </div>

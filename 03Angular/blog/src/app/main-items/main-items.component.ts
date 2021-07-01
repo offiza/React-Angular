@@ -27,8 +27,7 @@ export class MainItemComponent implements OnInit {
   }
 
   getMainItems(): void {
-    this.mainItemService.getMainItems()
+    this.mainItemService.getArticles()
         .subscribe(mainItems => this.mainItems = mainItems);
   }
-
 }

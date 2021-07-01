@@ -11,19 +11,22 @@ import { MainItemService } from '../main-item.service';
 export class ArticleComponent implements OnInit {
   mainItems: MainItem[] = [];
   param?: Number = 1;
-  item?: MainItem ;
+  item?: MainItem;
   constructor(private route: ActivatedRoute, private mainItemService: MainItemService) { }
 
   @Input() mainItem?: MainItem;
 
   ngOnInit(): void {
     this.getMainItems();
-    this.getParams();
   }
 
   getMainItems(): void {
-    this.mainItemService.getMainItems()
-        .subscribe(mainItems => this.mainItems = mainItems);
+    this.mainItemService.getArticles()
+
+    .subscribe(mainItems => {
+      this.mainItems = mainItems;   
+      this.getParams();
+    });
   }
 
   getParams(): void{

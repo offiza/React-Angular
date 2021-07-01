@@ -8,6 +8,7 @@ import { MainItemComponent } from './main-items/main-items.component';
 import { MainItemDetailComponent } from './main-item-detail/main-item-detail.component';
 import { AboutComponent } from './about/about.component';
 import { ArticleComponent } from './article/article.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ArticleComponent } from './article/article.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

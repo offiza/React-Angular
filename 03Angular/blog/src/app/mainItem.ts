@@ -2,6 +2,9 @@ export interface MainItem {
     id: number;
     name: string;
     content: string;
-    footer: string;
+    author: string;
+    date: string | undefined;
+    images: string[] | undefined;
+    comments: any | undefined;
     hidden ?: boolean | true;
 }

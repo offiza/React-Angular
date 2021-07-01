@@ -1,21 +1,51 @@
 import { Injectable } from '@angular/core';
-
 import { Observable, of } from 'rxjs';
-
 import { MainItem } from './mainItem';
 import { MainItems } from './mock-main-item';
 import { MessageService } from './message.service';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { catchError, map, tap } from 'rxjs/operators';  
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class MainItemService {
+  private baseUrl = 'http://localhost:4201/';
 
-  constructor(private messageService: MessageService) { }
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  };
+  
+  constructor(private http: HttpClient, private messageService: MessageService) { }
 
-  getMainItems(): Observable<MainItem[]> {
-    const mainItems = of(MainItems);
-    this.messageService.add('HeroService: fetched heroes');
-    return mainItems;
+  getArticles() : Observable<MainItem[]>{
+    return this.http.get<MainItem[]>(this.baseUrl + "articles")
+    .pipe(
+      tap(_ => this.log('fetched heroes')),
+      catchError(this.handleError<MainItem[]>('getHeroes', []))
+    );
+  }
+
+  getArticleById(id: number): Observable<MainItem> {
+    const url = `${this.baseUrl}/${id}`;
+
+    return this.http.get<MainItem>(url).pipe(
+      tap(_ => this.log(`fetched hero id=${id}`)),
+      catchError(this.handleError<MainItem>(`getHero id=${id}`))
+    );
+  }
+
+  private handleError<T>(operation = 'operation', result?: T) {
+    return (error: any): Observable<T> => {
+      console.error(error); 
+      this.log(`${operation} failed: ${error.message}`);
+
+      return of(result as T);
+    };
+  }
+
+  private log(message: string) {
+    this.messageService.add(`MainItem: ${message}`);
   }
 }
