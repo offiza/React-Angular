@@ -1,3 +1,10 @@
+<div class="search">
+    <p>Search 🔎</p>
+    <form name="search" method="get">
+        <input type="text" name="searchBar" id="search-bar" size="50">
+        <input type="button" class="search-button" (click)="Search()" value="Search">
+    </form>
+</div>
 <div class="cont">
     <div class="container" *ngFor="let mainItem of mainItems" [class.selected]="mainItem === selectedItem" (click)="onSelect(mainItem)">
         <div class="main-item">

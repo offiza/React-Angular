@@ -4,9 +4,12 @@
             <p>{{item.name}}</p>
         </div>
         <div class="article__content">
-            <div class="article__text-images">
-
+            <div class="article__content-listImage">
+                <div class="article__text-images" *ngFor="let image of item?.images">
+                    <img src="{{image}}" alt="">
+                </div>
             </div>
+
             <div class="article__content-text">
                 <p>{{item.content}}</p>
             </div>

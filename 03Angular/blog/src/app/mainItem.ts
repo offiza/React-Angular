@@ -4,7 +4,7 @@ export interface MainItem {
     content: string;
     author: string;
     date: string | undefined;
-    images: string[] | undefined;
+    images: any | undefined;
     comments: any | undefined;
     hidden ?: boolean | true;
 }

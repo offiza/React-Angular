@@ -30,4 +30,21 @@ export class MainItemComponent implements OnInit {
     this.mainItemService.getArticles()
         .subscribe(mainItems => this.mainItems = mainItems);
   }
+
+  Search(): void{
+    const searchBar = document.getElementById('search-bar') as HTMLInputElement;
+    const text = searchBar.value.trim();
+
+    if(text.length > 0){
+      this.mainItemService.getArticles().subscribe(articles => {
+        this.mainItems = articles.filter(a => {
+          return a.name.toLowerCase().includes(text.toLowerCase());
+        })
+      })
+    }
+    
+    else{
+      this.mainItemService.getArticles().subscribe(mainItem => this.mainItems = mainItem);
+    }    
+  }
 }

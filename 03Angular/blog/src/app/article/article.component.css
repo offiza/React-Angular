@@ -21,9 +21,23 @@
     color: white;
 }
 
+.article__content-listImage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.article__text-images img {
+    height: 200px;
+}
+
 .article__content {
     background-color: rgb(255, 233, 230);
     padding: 10px;
+}
+
+.article__content-text {
+    margin: 10px 5px;
 }
 
 .article__content-text p {
