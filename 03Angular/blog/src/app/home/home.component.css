@@ -1,0 +1,50 @@
+label {
+    font-size: 14pt;
+    top: 0;
+    margin: 10px;
+}
+
+input {
+    margin: 10px;
+    width: 300px;
+    float: right;
+}
+
+textarea {
+    margin: 10px;
+    max-width: 300px;
+    min-width: 300px;
+    max-height: 250px;
+    min-height: 17px;
+}
+
+.article-creating {
+    width: 500px;
+    margin: 80px auto;
+}
+
+.article-creating__header {
+    background-color: rgb(252, 106, 80);
+    text-align: center;
+}
+
+.article-creating__header p {
+    padding: 5px;
+    font-size: 18pt;
+    font-weight: 600;
+    color: #fff;
+}
+
+.article-creating__content {
+    background-color: rgb(255, 241, 234);
+}
+
+.content__button {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.content__div {
+    display: flex;
+    justify-content: space-between;
+}

@@ -9,6 +9,7 @@ import { MainItemDetailComponent } from './main-item-detail/main-item-detail.com
 import { AboutComponent } from './about/about.component';
 import { ArticleComponent } from './article/article.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
     MainItemComponent,
     MainItemDetailComponent,
     AboutComponent,
-    ArticleComponent
+    ArticleComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

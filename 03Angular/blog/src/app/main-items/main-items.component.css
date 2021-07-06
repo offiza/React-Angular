@@ -65,42 +65,6 @@ form {
     flex-wrap: wrap;
 }
 
-.shine-button {
-    text-decoration: none;
-    display: inline-block;
-    padding: 10px 30px;
-    margin: 10px 20px;
-    position: relative;
-    overflow: hidden;
-    border: 2px solid rgb(252, 106, 80);
-    border-radius: 8px;
-    font-family: 'Montserrat', sans-serif;
-    color: rgb(252, 106, 80);
-    transition: .2s ease-in-out;
-    background-color: rgb(255, 233, 230);
-}
-
-.shine-button:before {
-    content: "";
-    background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
-    height: 50px;
-    width: 50px;
-    position: absolute;
-    top: -8px;
-    left: -75px;
-    transform: skewX(-45deg);
-}
-
-.shine-button:hover {
-    background: rgb(252, 106, 80);
-    color: #fff;
-}
-
-.shine-button:hover:before {
-    left: 150px;
-    transition: .5s ease-in-out;
-}
-
 @media (max-width: 1100px) {
     .cont {
         flex-direction: column;

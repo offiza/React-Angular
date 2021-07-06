@@ -85,6 +85,11 @@
     background-color: rgb(255, 233, 230);
 }
 
+.write__comment {
+    display: flex;
+    padding: 5px;
+}
+
 .comments__content-item {
     display: flex;
 }

@@ -28,6 +28,12 @@
         </div>
 
         <div class="comments__content">
+            <div class="write__comment">
+                <input type="text" id="name" placeholder="Author Name">
+                <input type="text" id="text" placeholder="Comment">
+                <button (click)="writeComment()">Write Comment</button>
+            </div>
+
             <ol>
                 <div class="comments__content-item" *ngFor="let comment of item?.comments">
                     <li>

@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { MainItem } from './mainItem';
-import { MainItems } from './mock-main-item';
 import { MessageService } from './message.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';  
@@ -34,6 +33,21 @@ export class MainItemService {
       tap(_ => this.log(`fetched hero id=${id}`)),
       catchError(this.handleError<MainItem>(`getHero id=${id}`))
     );
+  }
+
+  postArticle(article: any){
+    const url = this.baseUrl + "post-article";
+    return this.http.put<any>(url, article);
+  }
+
+  getNextArticleId() : Observable<any>{
+    const url = this.baseUrl + "next-article-id";
+    return this.http.get<any>(url);
+  }
+
+  postComment(comment: any) : Observable<any>{
+    const url = this.baseUrl + "post-comment";
+    return this.http.put<any>(url, comment);
   }
 
   private handleError<T>(operation = 'operation', result?: T) {

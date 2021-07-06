@@ -12,7 +12,7 @@ export class ArticleComponent implements OnInit {
   mainItems: MainItem[] = [];
   param?: Number = 1;
   item?: MainItem;
-  constructor(private route: ActivatedRoute, private mainItemService: MainItemService) { }
+  constructor(private route: ActivatedRoute, private mainItemServise: MainItemService) { }
 
   @Input() mainItem?: MainItem;
 
@@ -21,12 +21,16 @@ export class ArticleComponent implements OnInit {
   }
 
   getMainItems(): void {
-    this.mainItemService.getArticles()
+    this.mainItemServise.getArticles()
 
     .subscribe(mainItems => {
       this.mainItems = mainItems;   
       this.getParams();
     });
+  }
+
+  validateComment(comment: any): boolean{
+    return (comment.name.length>1 && comment.text.length) ? true : false;
   }
 
   getParams(): void{
@@ -37,5 +41,30 @@ export class ArticleComponent implements OnInit {
         }
       });
     });
+  }
+
+  writeComment(): void{
+    let id = this.item?.id;
+    let name = (document.getElementById("name") as HTMLInputElement).value.trim();
+    let text = (document.getElementById("text") as HTMLInputElement).value.trim();
+
+    let newComment = {
+      id,
+      name,
+      text
+    };
+
+    if(!this.validateComment(newComment)){
+      alert('All fields must be filled');
+      return;
+    }
+
+    this.mainItemServise.postComment(newComment).subscribe(result => {
+      if(result.err){
+        alert(result.err);
+        return;
+      }
+      alert("Success!");
+    })
   }
 }
